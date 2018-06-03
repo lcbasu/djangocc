@@ -1,4 +1,10 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
 def home(request):
-    return HttpResponse('Just hold it all together. We must make it to the end!')
+    '''
+    Renders home page
+    :param request:
+    :return:
+    '''
+    context = {} # an empty dictionary
+    return render(request, 'home.html', context)
