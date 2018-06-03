@@ -8,23 +8,20 @@
         <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     </head>
     <body>
-        <h1>
-            {{ greeting_message | title }}
-        </h1>
-        <h3>
-            {{ random_message }}
-        </h3>
-        {% if weekday_list %}
-            <p>Weekday list is defined.</p>
-            <ul>
-                {% for day in weekday_list %}
-                    <li>
-                        {{ day | title | slice:":3" }}
-                    </li>
-                {% endfor %}
-            </ul>
-        {% else %}
-            <p>Weekday list is not defined.</p>
-        {% endif %}
+        <nav>
+            <a href="">Link 1</a> |
+            <a href="">Link 2</a> |
+            <a href="">Link 3</a> |
+            <a href="">Link 4</a> |
+            <a href="">Link 5</a>
+        </nav>
+        <div class="homepage-content">
+            <div class="homepage-banner">
+                <h1>Hope</h1>
+                <hr>
+                <h4>Must do!</h4>
+                <a class="button" href="">Get started</a>
+            </div>
+        </div>
     </body>
 </html>
