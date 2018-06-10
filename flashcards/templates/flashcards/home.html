@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Learning Django in 1 day</title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    </head>
+    <body>
+        <nav>
+            <a href="">Link 1</a> |
+            <a href="">Link 2</a> |
+            <a href="">Link 3</a> |
+            <a href="">Link 4</a> |
+            <a href="">Link 5</a>
+        </nav>
+        {% if decks %}
+            <ul>
+                {% for deck in decks %}
+                    <li>{{deck}}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <h1>No decks found</h1>
+        {% endif %}
+    </body>
+</html>

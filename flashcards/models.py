@@ -8,3 +8,6 @@ from django.db import models
 class Deck(models.Model):
     title = models.CharField(max_length=64, null=False, blank=False)
     description = models.CharField(max_length=256, null=False, blank=True)
+
+    def __str__(self):
+        return self.title
